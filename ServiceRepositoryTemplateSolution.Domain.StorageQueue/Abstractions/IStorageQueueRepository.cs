@@ -9,8 +9,8 @@ namespace ServiceRepositoryTemplateSolution.Domain.StorageQueue.Abstractions {
     public interface IStorageQueueRepository {
         public void DeleteQueue();
         public Task DeleteQueueAsync();
-        public void ClearQueue(string queueName);
-        public Task ClearQueueAsync(string queueName);
+        public void ClearQueue();
+        public Task ClearQueueAsync();
         public void SendMessage(string message);
         public Task SendMessageAsync(string message);
         public StorageQueueMessageDTO PeekMessage();
