@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 namespace ServiceRepositoryTemplateSolution.Repo.StorageQueue {
     public class StorageQueueRepositoryParameter {
         private readonly QueueClient _queueClient;
-        public StorageQueueRepositoryParameter(QueueServiceClient queueServiceClient, string queueName) {
+        public StorageQueueRepositoryParameter(string cnn, string queueName) {
             if (string.IsNullOrWhiteSpace(queueName))
-                throw new ArgumentException("Queue name invalid.");
-            _queueClient = queueServiceClient.GetQueueClient(queueName);
+                throw new ArgumentException("Invalid queue name.");
+            if (string.IsNullOrWhiteSpace(cnn))
+                throw new ArgumentException("Invalid connection string.");
+            _queueClient = new QueueClient(cnn, queueName);
         }
 
         public QueueClient QueueClient => _queueClient;

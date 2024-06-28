@@ -1,4 +1,5 @@
 ﻿using Azure.Storage.Queues;
+using Azure.Storage.Queues.Models;
 using ServiceRepositoryTemplateSolution.Domain.StorageQueue.Abstractions;
 using ServiceRepositoryTemplateSolution.Domain.StorageQueue.DataTransferObjects;
 using System;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace ServiceRepositoryTemplateSolution.Repo.StorageQueue {
     public class StorageQueueRepository : IStorageQueueRepository {
         private readonly QueueClient _queueClient;
+        private const int _minPeekingMessages = 1;
         public StorageQueueRepository(StorageQueueRepositoryParameter parameter) {
             _queueClient = parameter.QueueClient;
         }
@@ -23,51 +25,69 @@ namespace ServiceRepositoryTemplateSolution.Repo.StorageQueue {
         }
 
         public void DeleteQueue() {
-            throw new NotImplementedException();
+            _queueClient.Delete();
         }
 
-        public Task DeleteQueueAsync() {
-            throw new NotImplementedException();
+        public async Task DeleteQueueAsync() {
+            await _queueClient.DeleteAsync();
         }
 
         public StorageQueueMessageDTO PeekMessage() {
-            throw new NotImplementedException();
+            return PeekMessages(1).First();
         }
 
-        public Task<StorageQueueMessageDTO> PeekMessageAsync() {
-            throw new NotImplementedException();
+        public async Task<StorageQueueMessageDTO> PeekMessageAsync() {
+            List<StorageQueueMessageDTO> peekedMessages = await PeekMessagesAsync(1);
+            return peekedMessages.First();
         }
 
         public List<StorageQueueMessageDTO> PeekMessages(int? maxMessages) {
-            throw new NotImplementedException();
+            int maxPeekableMessages = _queueClient.MaxPeekableMessages;
+            if (maxMessages < _minPeekingMessages || maxMessages > maxPeekableMessages)
+                throw new ArgumentException($"maxMessages value is {maxMessages} but it must be between {_minPeekingMessages} and {maxPeekableMessages}.");
+            PeekedMessage[] peekedMessages = _queueClient.PeekMessages(maxMessages);
+            return peekedMessages.Select(msg => new StorageQueueMessageDTO(msg.MessageId, msg.Body, msg.InsertedOn, msg.ExpiresOn, msg.DequeueCount)).ToList();
         }
 
-        public Task<List<StorageQueueMessageDTO>> PeekMessagesAsync(int? maxMessages) {
-            throw new NotImplementedException();
+        public async Task<List<StorageQueueMessageDTO>> PeekMessagesAsync(int? maxMessages) {
+            int maxPeekableMessages = _queueClient.MaxPeekableMessages;
+            if (maxMessages < _minPeekingMessages || maxMessages > maxPeekableMessages)
+                throw new ArgumentException($"maxMessages value is {maxMessages} but it must be between {_minPeekingMessages} and {maxPeekableMessages}.");
+            PeekedMessage[] peekedMessages = await _queueClient.PeekMessagesAsync(maxMessages);
+            return peekedMessages.Select(msg => new StorageQueueMessageDTO(msg.MessageId, msg.Body, msg.InsertedOn, msg.ExpiresOn, msg.DequeueCount)).ToList();
         }
 
         public StorageQueueMessageDTO ReceiveMessage() {
-            throw new NotImplementedException();
+            return ReceiveMessages(1).First();
         }
 
-        public Task<StorageQueueMessageDTO> ReceiveMessageAsync() {
-            throw new NotImplementedException();
+        public async Task<StorageQueueMessageDTO> ReceiveMessageAsync() {
+            List<StorageQueueMessageDTO> receivedMessages = await ReceiveMessagesAsync(1);
+            return receivedMessages.First();
         }
 
         public List<StorageQueueMessageDTO> ReceiveMessages(int? maxMessages) {
-            throw new NotImplementedException();
+            int maxPeekableMessages = _queueClient.MaxPeekableMessages;
+            if (maxMessages < _minPeekingMessages || maxMessages > maxPeekableMessages)
+                throw new ArgumentException($"maxMessages value is {maxMessages} but it must be between {_minPeekingMessages} and {maxPeekableMessages}.");
+            QueueMessage[] receivedMessages = _queueClient.ReceiveMessages(maxMessages);
+            return receivedMessages.Select(msg => new StorageQueueMessageDTO(msg.MessageId, msg.Body, msg.InsertedOn, msg.ExpiresOn, msg.DequeueCount)).ToList();
         }
 
-        public Task<List<StorageQueueMessageDTO>> ReceiveMessagesAsync(int? maxMessages) {
-            throw new NotImplementedException();
+        public async Task<List<StorageQueueMessageDTO>> ReceiveMessagesAsync(int? maxMessages) {
+            int maxPeekableMessages = _queueClient.MaxPeekableMessages;
+            if (maxMessages < _minPeekingMessages || maxMessages > maxPeekableMessages)
+                throw new ArgumentException($"maxMessages value is {maxMessages} but it must be between {_minPeekingMessages} and {maxPeekableMessages}.");
+            QueueMessage[] receivedMessages = await _queueClient.ReceiveMessagesAsync(maxMessages);
+            return receivedMessages.Select(msg => new StorageQueueMessageDTO(msg.MessageId, msg.Body, msg.InsertedOn, msg.ExpiresOn, msg.DequeueCount)).ToList();
         }
 
         public void SendMessage(string message) {
-            throw new NotImplementedException();
+            _queueClient.SendMessage(message);
         }
 
-        public Task SendMessageAsync(string message) {
-            throw new NotImplementedException();
+        public async Task SendMessageAsync(string message) {
+            await _queueClient.SendMessageAsync(message);
         }
     }
 }
