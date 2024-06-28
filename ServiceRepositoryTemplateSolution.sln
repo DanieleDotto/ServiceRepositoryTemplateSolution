@@ -13,6 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StorageQueue", "StorageQueu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlobStorage", "BlobStorage", "{2D569815-B74B-4273-A1C7-18ED899BEBDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Domain.BlobStorage", "ServiceRepositoryTemplateSolution.Domain.BlobStorage\ServiceRepositoryTemplateSolution.Domain.BlobStorage.csproj", "{8DD9F2B1-57CA-461F-81B9-206E1514C012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Repo.BlobStorage", "ServiceRepositoryTemplateSolution.Repo.BlobStorage\ServiceRepositoryTemplateSolution.Repo.BlobStorage.csproj", "{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Svc.BlobStorage", "ServiceRepositoryTemplateSolution.Svc.BlobStorage\ServiceRepositoryTemplateSolution.Svc.BlobStorage.csproj", "{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,18 @@ Global
 		{0D71F393-6A99-4977-89BA-113CC6475F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D71F393-6A99-4977-89BA-113CC6475F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D71F393-6A99-4977-89BA-113CC6475F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD9F2B1-57CA-461F-81B9-206E1514C012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD9F2B1-57CA-461F-81B9-206E1514C012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD9F2B1-57CA-461F-81B9-206E1514C012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD9F2B1-57CA-461F-81B9-206E1514C012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +57,9 @@ Global
 		{FAC641A7-2433-4E6A-B997-D2005C71CA98} = {9FACF47F-2163-4C16-BA42-E6702B340DAC}
 		{B89586B0-067D-42F7-862E-4C200CFD91A7} = {9FACF47F-2163-4C16-BA42-E6702B340DAC}
 		{0D71F393-6A99-4977-89BA-113CC6475F81} = {9FACF47F-2163-4C16-BA42-E6702B340DAC}
+		{8DD9F2B1-57CA-461F-81B9-206E1514C012} = {2D569815-B74B-4273-A1C7-18ED899BEBDB}
+		{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F} = {2D569815-B74B-4273-A1C7-18ED899BEBDB}
+		{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7} = {2D569815-B74B-4273-A1C7-18ED899BEBDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {336A1108-DDEF-495F-AA14-2B3CB4E98319}
