@@ -10,4 +10,8 @@
     <Folder Include="DataTransferObjects\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Memory.Data" Version="1.0.2" />
+  </ItemGroup>
+
 </Project>

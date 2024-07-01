@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Domain.StorageQueue", "ServiceRepositoryTemplateSolution.Domain.StorageQueue\ServiceRepositoryTemplateSolution.Domain.StorageQueue.csproj", "{FAC641A7-2433-4E6A-B997-D2005C71CA98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Domain.StorageQueue", "ServiceRepositoryTemplateSolution.Domain.StorageQueue\ServiceRepositoryTemplateSolution.Domain.StorageQueue.csproj", "{FAC641A7-2433-4E6A-B997-D2005C71CA98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Repo.StorageQueue", "ServiceRepositoryTemplateSolution.Repository.StorageQueue\ServiceRepositoryTemplateSolution.Repo.StorageQueue.csproj", "{B89586B0-067D-42F7-862E-4C200CFD91A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Repo.StorageQueue", "ServiceRepositoryTemplateSolution.Repository.StorageQueue\ServiceRepositoryTemplateSolution.Repo.StorageQueue.csproj", "{B89586B0-067D-42F7-862E-4C200CFD91A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Svc.StorageQueue", "ServiceRepositoryTemplateSolution.Service.StorageQueue\ServiceRepositoryTemplateSolution.Svc.StorageQueue.csproj", "{0D71F393-6A99-4977-89BA-113CC6475F81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Svc.StorageQueue", "ServiceRepositoryTemplateSolution.Service.StorageQueue\ServiceRepositoryTemplateSolution.Svc.StorageQueue.csproj", "{0D71F393-6A99-4977-89BA-113CC6475F81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StorageQueue", "StorageQueue", "{9FACF47F-2163-4C16-BA42-E6702B340DAC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlobStorage", "BlobStorage", "{2D569815-B74B-4273-A1C7-18ED899BEBDB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlobContainer", "BlobContainer", "{2D569815-B74B-4273-A1C7-18ED899BEBDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Domain.BlobStorage", "ServiceRepositoryTemplateSolution.Domain.BlobStorage\ServiceRepositoryTemplateSolution.Domain.BlobStorage.csproj", "{8DD9F2B1-57CA-461F-81B9-206E1514C012}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Domain.BlobContainer", "ServiceRepositoryTemplateSolution.Domain.BlobStorage\ServiceRepositoryTemplateSolution.Domain.BlobContainer.csproj", "{8DD9F2B1-57CA-461F-81B9-206E1514C012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Repo.BlobStorage", "ServiceRepositoryTemplateSolution.Repo.BlobStorage\ServiceRepositoryTemplateSolution.Repo.BlobStorage.csproj", "{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Repo.BlobContainer", "ServiceRepositoryTemplateSolution.Repo.BlobStorage\ServiceRepositoryTemplateSolution.Repo.BlobContainer.csproj", "{34B0B78E-12F8-4A04-8BDF-BD1D2ADA5E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Svc.BlobStorage", "ServiceRepositoryTemplateSolution.Svc.BlobStorage\ServiceRepositoryTemplateSolution.Svc.BlobStorage.csproj", "{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Svc.BlobContainer", "ServiceRepositoryTemplateSolution.Svc.BlobStorage\ServiceRepositoryTemplateSolution.Svc.BlobContainer.csproj", "{7F289903-C85B-4B6C-96A9-4FD7D9ABF5C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CosmosDB", "CosmosDB", "{34363D78-4C06-43E1-8E33-BF6463F3D196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
