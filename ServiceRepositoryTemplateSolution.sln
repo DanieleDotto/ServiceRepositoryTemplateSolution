@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Domain.CosmosDB", "ServiceRepositoryTemplateSolution.Domain.CosmosDB\ServiceRepositoryTemplateSolution.Domain.CosmosDB.csproj", "{F00C26D9-8279-4671-B641-B7DE3CFC084A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.FunctionApp.StorageAccount", "ServiceRepositoryTemplateSolution.FunctionApp.Cosmos\ServiceRepositoryTemplateSolution.FunctionApp.StorageAccount.csproj", "{ECC8388B-FA33-4D54-97EF-8932632CF564}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.FunctionApp.BlobContainer", "ServiceRepositoryTemplateSolution.FunctionApp.Cosmos\ServiceRepositoryTemplateSolution.FunctionApp.BlobContainer.csproj", "{ECC8388B-FA33-4D54-97EF-8932632CF564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
