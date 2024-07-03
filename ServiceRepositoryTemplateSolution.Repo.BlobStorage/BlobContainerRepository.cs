@@ -18,20 +18,47 @@ namespace ServiceRepositoryTemplateSolution.Repo.BlobStorage {
         }
 
         public void UploadBlob(string blobName, BinaryData data) {
-            _blobContainerClient.UploadBlob(blobName, data);
+            try {
+                _blobContainerClient.UploadBlob(blobName, data);
+            } catch (RequestFailedException e) {
+                Console.WriteLine($"Si è verificato un errore durante l'upload del blob: {blobName}");
+                Console.WriteLine($"Dettagli dell'errore: {e.Message}");
+                Console.WriteLine(e.StackTrace);
+            }
         }
 
         public async Task UploadBlobAsync(string blobName, BinaryData data) {
-            await _blobContainerClient.UploadBlobAsync(blobName, data);
+            try {
+                await _blobContainerClient.UploadBlobAsync(blobName, data);
+            } catch (RequestFailedException e) {
+                await Console.Out.WriteLineAsync($"Si è verificato un errore durante l'upload del blob: {blobName}");
+                await Console.Out.WriteLineAsync($"Dettagli dell'errore: {e.Message}");
+                await Console.Out.WriteLineAsync(e.StackTrace);
+            }
         }
 
-        public BinaryData DownloadBlob(string blobName) {
-            return _blobContainerClient.GetBlobClient(blobName).DownloadContent().Value.Content;
+        public BinaryData? DownloadBlob(string blobName) {
+            try {
+                return _blobContainerClient.GetBlobClient(blobName).DownloadContent().Value.Content;
+            } catch (RequestFailedException e) {
+                Console.WriteLine($"Si è verificato un errore durante il download del blob: {blobName}");
+                Console.WriteLine($"Dettagli dell'errore: {e.Message}");
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
         }
 
-        public async Task<BinaryData> DownloadBlobAsync(string blobName) {
-            BlobDownloadResult response = await _blobContainerClient.GetBlobClient(blobName).DownloadContentAsync();
-            return response.Content;
+
+        public async Task<BinaryData?> DownloadBlobAsync(string blobName) {
+            try {
+                BlobDownloadResult response = await _blobContainerClient.GetBlobClient(blobName).DownloadContentAsync();
+                return response.Content;
+            } catch (RequestFailedException e) {
+                Console.WriteLine($"Si è verificato un errore durante il download del blob: {blobName}");
+                Console.WriteLine($"Dettagli dell'errore: {e.Message}");
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
         }
 
 

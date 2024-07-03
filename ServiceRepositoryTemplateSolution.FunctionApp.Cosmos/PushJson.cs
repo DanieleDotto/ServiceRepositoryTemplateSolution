@@ -4,13 +4,13 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using ServiceRepositoryTemplateSolution.Domain.BlobContainer.Abstractions;
 
-namespace ServiceRepositoryTemplateSolution.FunctionApp.Cosmos
+namespace ServiceRepositoryTemplateSolution.FunctionApp.StorageAccount
 {
-    public class BlobStorage
+    public class PushJson
     {
-        private readonly ILogger<BlobStorage> _logger;
+        private readonly ILogger<PushJson> _logger;
         private IBlobContainerService _blobContainerService;
-        public BlobStorage(ILogger<BlobStorage> logger, IBlobContainerService blobContainerService)
+        public PushJson(ILogger<PushJson> logger, IBlobContainerService blobContainerService)
         {
             _logger = logger;
             _blobContainerService = blobContainerService;

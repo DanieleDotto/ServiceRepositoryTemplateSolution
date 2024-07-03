@@ -8,7 +8,7 @@ namespace ServiceRepositoryTemplateSolution.Domain.BlobStorage.Abstractions {
     public interface IBlobContainerRepository {
         public void UploadBlob(string blobName, BinaryData data);
         public Task UploadBlobAsync(string blobName, BinaryData data);
-        public BinaryData DownloadBlob(string blobName);
-        public Task<BinaryData> DownloadBlobAsync(string blobName);
+        public BinaryData? DownloadBlob(string blobName);
+        public Task<BinaryData?> DownloadBlobAsync(string blobName);
     }
 }
