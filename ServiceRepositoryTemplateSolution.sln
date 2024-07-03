@@ -21,11 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CosmosDB", "CosmosDB", "{34363D78-4C06-43E1-8E33-BF6463F3D196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Repo.CosmosDB", "ServiceRepositoryTemplateSolution.Repo.CosmosDB\ServiceRepositoryTemplateSolution.Repo.CosmosDB.csproj", "{F9037C5A-9F50-4241-BAC7-3EE0D30B2396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Repo.CosmosDB", "ServiceRepositoryTemplateSolution.Repo.CosmosDB\ServiceRepositoryTemplateSolution.Repo.CosmosDB.csproj", "{F9037C5A-9F50-4241-BAC7-3EE0D30B2396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Svc.CosmosDB", "ServiceRepositoryTemplateSolution.Svc.CosmosDB\ServiceRepositoryTemplateSolution.Svc.CosmosDB.csproj", "{FC087C55-B81E-45F1-BBD3-E1A15E9F0A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Svc.CosmosDB", "ServiceRepositoryTemplateSolution.Svc.CosmosDB\ServiceRepositoryTemplateSolution.Svc.CosmosDB.csproj", "{FC087C55-B81E-45F1-BBD3-E1A15E9F0A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.Domain.CosmosDB", "ServiceRepositoryTemplateSolution.Domain.CosmosDB\ServiceRepositoryTemplateSolution.Domain.CosmosDB.csproj", "{F00C26D9-8279-4671-B641-B7DE3CFC084A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceRepositoryTemplateSolution.Domain.CosmosDB", "ServiceRepositoryTemplateSolution.Domain.CosmosDB\ServiceRepositoryTemplateSolution.Domain.CosmosDB.csproj", "{F00C26D9-8279-4671-B641-B7DE3CFC084A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRepositoryTemplateSolution.FunctionApp.StorageAccount", "ServiceRepositoryTemplateSolution.FunctionApp.Cosmos\ServiceRepositoryTemplateSolution.FunctionApp.StorageAccount.csproj", "{ECC8388B-FA33-4D54-97EF-8932632CF564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{F00C26D9-8279-4671-B641-B7DE3CFC084A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00C26D9-8279-4671-B641-B7DE3CFC084A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F00C26D9-8279-4671-B641-B7DE3CFC084A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC8388B-FA33-4D54-97EF-8932632CF564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC8388B-FA33-4D54-97EF-8932632CF564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC8388B-FA33-4D54-97EF-8932632CF564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC8388B-FA33-4D54-97EF-8932632CF564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

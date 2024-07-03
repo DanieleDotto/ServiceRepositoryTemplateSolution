@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceRepositoryTemplateSolution.Domain.BlobStorage\ServiceRepositoryTemplateSolution.Domain.BlobContainer.csproj" />
+  </ItemGroup>
+
 </Project>
